@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Perfumería</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff7f8;
+      color: #333;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #c65b7c;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    input, select, button {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    button {
+      background-color: #c65b7c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f7d4de;
+    }
+  </style>
+</head>
+<body>
+  <h1>💐 CRM Perfumería</h1>
+
+  <!-- FORMULARIO CLIENTES -->
+  <h2>Registrar Cliente</h2>
+  <form id="formCliente">
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+    <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
+    <input type="email" id="correo" name="correo" placeholder="Correo" required>
+    <button type="submit">Agregar Cliente</button>
+  </form>
+
+  <!-- LISTA DE CLIENTES -->
+  <h2>Clientes Registrados</h2>
+  <table id="tablaClientes">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- NUEVO FORMULARIO DE VENTAS -->
+  <h2>Registrar Venta</h2>
+  <form id="formVenta">
+    <select id="clienteVenta" required>
+      <option value="">Selecciona un cliente</option>
+    </select>
+    <input type="text" id="producto" placeholder="Producto" required>
+    <input type="number" id="total" placeholder="Total ($)" required>
+    <button type="submit">Registrar Venta</button>
+  </form>
+
+  <!-- LISTA DE VENTAS -->
+  <h2>Ventas Registradas</h2>
+  <table id="tablaVentas">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Total</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
